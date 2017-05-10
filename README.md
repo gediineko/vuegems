@@ -1,4 +1,4 @@
-# vue-time-tracker
+# vuegems
 
 > A Vue.js project
 
