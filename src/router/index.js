@@ -1,25 +1,34 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/Login'
-import Home from '@/components/Home'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      redirect: '/home'
-    },
-    {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: function (resolve) {
+        require(['@/components/login/Login.vue'], resolve)
+      }
+    },
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: function (resolve) {
+        require(['@/components/signup/SignUp.vue'], resolve)
+      }
     },
     {
       path: '/home',
       name: 'Home',
-      component: Home
+      component: function (resolve) {
+        require(['@/components/pages/Home.vue'], resolve)
+      }
+    },
+    {
+      path: '/',
+      redirect: '/home'
     }
   ]
 })

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <main-nav></main-nav>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -15,7 +15,6 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  @import '../node_modules/vuetify/src/stylus/main'
-  @import './assets/app.css'
+<style>
+
 </style>
